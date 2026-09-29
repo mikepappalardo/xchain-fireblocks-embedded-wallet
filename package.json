@@ -1,0 +1,86 @@
+{
+  "name": "xchain-dynamic",
+  "version": "0.1.0",
+  "description": "Connect a Dynamic embedded EVM wallet to an Algorand xChain account.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikepappalardo/xchain-dynamic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mikepappalardo/xchain-dynamic/issues"
+  },
+  "homepage": "https://github.com/mikepappalardo/xchain-dynamic#readme",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./dynamic": {
+      "types": "./dist/dynamic.d.ts",
+      "import": "./dist/dynamic.js"
+    },
+    "./react": {
+      "types": "./dist/react.d.ts",
+      "import": "./dist/react.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepare": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "algorand",
+    "xchain",
+    "dynamic",
+    "embedded-wallet",
+    "eip-712"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "@algorandfoundation/algokit-utils": "^9.2.0",
+    "@dynamic-labs-sdk/client": "^1.35.0",
+    "@dynamic-labs-sdk/evm": "^1.35.0",
+    "@dynamic-labs-sdk/react-hooks": "^1.35.0",
+    "algo-x-evm-sdk": "^0.1.3",
+    "algosdk": "^3.5.0",
+    "react": "^18.0.0 || ^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@dynamic-labs-sdk/client": {
+      "optional": true
+    },
+    "@dynamic-labs-sdk/evm": {
+      "optional": true
+    },
+    "@dynamic-labs-sdk/react-hooks": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@algorandfoundation/algokit-utils": "^9.2.0",
+    "@dynamic-labs-sdk/client": "^1.35.1",
+    "@dynamic-labs-sdk/evm": "^1.35.1",
+    "@dynamic-labs-sdk/react-hooks": "^1.35.1",
+    "@tanstack/react-query": "^5.90.0",
+    "@types/react": "^19.2.0",
+    "algo-x-evm-sdk": "^0.1.3",
+    "algosdk": "^3.5.2",
+    "react": "^19.2.0",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}
