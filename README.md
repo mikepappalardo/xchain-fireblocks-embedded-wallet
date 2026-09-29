@@ -1,6 +1,6 @@
-# xchain-dynamic
+# xchain-dynamic-fireblocks-embedded-wallet
 
-Connect a [Dynamic](https://www.dynamic.xyz) embedded EVM wallet to an [Algorand xChain](https://github.com/algorandfoundation/xchain-accounts) account, and reuse that connection in every app.
+Connect a Fireblocks [Dynamic](https://www.dynamic.xyz) embedded EVM wallet to an [Algorand xChain](https://github.com/algorandfoundation/xchain-accounts) account, and reuse that connection in every app.
 
 The embedded wallet's EVM address owns a logic-signature account. Signing an Algorand transaction asks that wallet for one EIP-712 signature. [algo-x-evm-sdk](https://www.npmjs.com/package/algo-x-evm-sdk) checks the signature on-chain. The same EVM key always maps to the same Algorand address.
 
